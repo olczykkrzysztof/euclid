@@ -1,0 +1,24 @@
+TXT "Equilateral triangle\n"
+
+TXT "We are given the line segment AB"
+
+@lin: LIN COORD 20 45 SLOPED 55 56
+@A: POC lin 0
+@B: POC lin 100
+LBL A
+LBL B
+
+TXT "We set the compass radius to AB"
+TXT "and draw the arcs from A and B"
+@a: ABP A B -65 10
+@b: ABP B A 55 10
+
+TXT "We mark the point of intersection"
+@C: INS a b
+LBL C
+
+TXT "And trace the lines from endpoints of the given line segment to the intersection point of arcs"
+LTP A C
+LTP B C
+
+TXT "We have obtained the equilateral triangle ABC"

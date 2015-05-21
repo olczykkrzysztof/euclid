@@ -1,0 +1,34 @@
+TXT "Line bisector\n"
+
+TXT "We are given the line together with ending points"
+
+@lin: LIN COORD 30 30 SLOPED 45 56
+
+@P1: POC lin 0
+@P2: POC lin 100
+LBL P1
+LBL P2
+
+TXT "We set the compass to the length of line"
+SCR P1 P2
+
+TXT "And draw the arcs as follows"
+@a1: ABP P1 P2 -65 10
+@a2: ABP P1 P2 55 10
+
+@b1: ABP P2 P1 55 10
+@b2: ABP P2 P1 -65 10
+
+TXT "We mark the points of intersection"
+@i1: INS a1 b1
+@i2: INS a2 b2
+
+TXT "And trace the line through the obtained points"
+@bisector: LTP i1 i2
+
+*TXT "The intersection with the original line is the midpoint of given line segment"
+@ins: INS bisector lin
+LBL ins "Q"
+TXT "Point Q is a midpoint of line segment p1p2"
+
+TXT ":D"

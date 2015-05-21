@@ -1,0 +1,16 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>d:\euclid_install\|d:\euclid_install_cd\</PublishUrlHistory>
+    <InstallUrlHistory>http://klub.chip.pl/krzys_85/euclid/</InstallUrlHistory>
+    <SupportUrlHistory>http://klub.chip.pl/krzys_85/Euclid</SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <ApplicationRevision>1</ApplicationRevision>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ReferencePath>
+    </ReferencePath>
+  </PropertyGroup>
+</Project>

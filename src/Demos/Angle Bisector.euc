@@ -1,0 +1,36 @@
+TXT "Angle's bisector\n"
+
+TXT "We are given two line segments setting up an angle..."
+
+@l1: LIN COORD 15 50 HORIZ 56
+@l2: LIN COORD 15 50 SLOPED -45 56
+
+TXT "... with vertex labeled P"
+
+@P: INS l1 l2
+LBL P
+
+TXT "We draw an arc"
+
+@alpha: ARC FROM P 30 -60 80
+
+@P1: INS alpha l1
+@P2: INS alpha l2
+LBL P1
+LBL P2
+
+TXT "With circle centered at P1 and P2 we draw next arcs"
+
+SCR P1 P2
+@a1: ARC FROM P1 -1 -70 40
+@a2: ARC FROM P2 -1 -10 40
+
+TXT "We mark the intersection"
+
+@B: INS a1 a2
+
+TXT "And trace line through this point and the angle's vertex"
+
+LTP P B
+
+TXT "\nDone"

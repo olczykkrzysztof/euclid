@@ -1,0 +1,62 @@
+TXT "Line trisector\n"
+
+TXT "We are given the line together with ending points"
+
+@lin: LIN COORD 10 50 HORIZ 80
+@p1: POC lin 0
+LBL p1 A
+@p2: POC lin 100
+LBL p2 B
+
+TXT "We draw a ray"
+
+@ray: LIN FROM p1 SLOPED -30 90
+
+TXT "Draw equidistantly three arcs"
+
+@a11: ARC FROM p1 20 -45 30
+@p11: INS ray a11
+@a12: ARC FROM p11 20 -45 30
+@p12: INS ray a12
+@a13: ARC FROM p12 20 -45 30
+@p13: INS ray a13
+LBL p13 C
+
+TXT "We draw arc from B with radius AC..."
+SCR p1 p13
+@d1: ARC FROM p2 -1 125 30
+
+TXT "...and from A with radius BC"
+SCR p2 p13
+@d2: ARC FROM p1 -1 35 30
+
+@d: INS d1 d2
+LBL d D
+
+TXT "Connect points to produce 2nd ray"
+
+@ray2: LTP d p2
+
+TXT "And put equidistant arcs at second ray"
+
+@a21: ARC FROM d 20 -45 30
+@p21: INS ray2 a21
+@a22: ARC FROM p21 20 -45 30
+@p22: INS ray2 a22
+@a23: ARC FROM p22 20 -45 30
+@p23: INS ray2 a23
+
+TXT "And finally we connect corresponding points on rays"
+
+@is1: LTP p1 d
+@is2: LTP p11 p21
+@is3: LTP p12 p22
+@is4: LTP p13 p23
+
+INS lin is1
+INS lin is2
+INS lin is3
+INS lin is4
+
+TXT "Those lines divide line segment into 3 equal parts"
+

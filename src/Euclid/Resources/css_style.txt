@@ -1,0 +1,31 @@
+body 
+{
+	font-family: Verdana, Arial, Times New Roman;
+	font-size: 14pt;
+	text-align: center;
+}
+
+h1, h2
+{
+	text-align: center;
+}
+
+h1 
+{
+	font-size: 21pt;
+	color: navy;
+}
+
+.step
+{
+	text-align: left;
+	width: 500px;
+}
+	
+#footer
+{
+	text-align: center;
+	font-size: 10pt;
+	font-weight: bold;
+	color: grey;
+}
